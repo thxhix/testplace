@@ -288,9 +288,9 @@ header{
 .form{
     margin-top: -60px;
 }
-.form .col-9{
-     background-color: #fff;
-     padding: 40px 50px;
+.form .form-row{
+ background-color: #fff;
+ padding: 40px 50px;
 }
 
 .form-title{
@@ -304,10 +304,27 @@ header{
     text-align: center;
     margin-bottom: 60px
 }
-.form-container{}
+.form-container{text-align: center;}
+.form-btn{
+    margin-top: 15px;
+    outline: none;
+    padding: 15px 40px;
+    background: #22a34c;
+    color: #fff;
+    border: 2px solid #1b803c;
+    transition: .3s ease; 
+}
+.form-btn:hover{
+    background: #1b803c;
+    color: #fff;
+    border: 2px solid #1b803c
+}
+.input-relative{position: relative;border-bottom: 1px solid #22a34c;}
+
 .input-container{
     padding: 0 15px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+
 }
 .form-input{
     background: #f2f2f2;
@@ -315,9 +332,37 @@ header{
     outline: none;
     padding: 10px 10px;
     width: 100%;
-    border-bottom: 1px solid #22a34c;
+    
 }
 
+.form-input-label{
+    color: #9e9e9e;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(0, -50%);
+    transition: .3s ease;
+}
+.form-input-label-icon{
+    display: inline-block;
+    width: 13px;
+    margin-left: 3px;
+    opacity: 0;
+    transition: .3s ease
+    
+}
+.form-input-label__success{
+    top: -15px;
+    left: 0;
+}
+.form-input-label__wrong{
+    color: red;
+}
+.form-input:active, .form-input:focus ~ .form-input-label{
+    top: -15px;
+    left: 0;
+
+}
 
 .about{
     background-color: #f2f2f2;
@@ -354,7 +399,7 @@ header{
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.why-item{
+.why-item-description{
     text-align: center;
     padding: 25px 0;
     border-top: 1px solid #22a34c;
@@ -367,4 +412,116 @@ header{
 .why-item-img__container{
     display: inline-block;
     width: 60px;
+}
+
+@media (min-width: 375px) and (max-width: 768px){
+    header{
+        text-align: center;
+        padding: 80px 0;
+    }
+    .title{
+        font-size: 38px;
+        line-height: normal;
+        margin: 50px 0;
+        padding: 0 10px;
+    }
+    .section-title{ text-align: center;margin-bottom: 60px; }
+    .section-title h2{
+        margin-bottom: 5px;
+        font-size: 34px
+    }
+    .header-img{
+        transform: translate(-10px, 0);
+        margin-top: 25px;
+    }
+    .header-title-counter span{
+        font-size: 32px;
+    }
+    .form{
+        margin-top: 0px;
+    }
+    .form-container{padding: 0 10px}
+    .form .form-row{
+     padding: 40px 10px;
+    }
+    .form-title{
+    margin-bottom: 5px;
+    }
+    .form .sub-title{
+        margin-bottom: 50px
+    }
+    .form-btn{
+        display: block;
+        width: 100%;
+        padding: 10px 40px;
+        border: 1px solid #1b803c; 
+    }
+    .form-btn:hover{
+        border: 1px solid #1b803c
+    }
+    .input-container{
+        padding: 0 0px;
+        margin-bottom: 37px;
+    }
+    .form-input{
+        padding: 10px 15px;
+    }
+    .form-input-label{
+        font-size: 12px;
+    }
+    .form-input-label-icon{
+        width: 11px;
+    }
+    .about{
+        margin-top: 0px;
+        padding-top: 1px;
+    }
+    .about-item{
+        padding: 0 25px;
+        margin-bottom: 45px
+    }
+    .about-item-img{
+        min-width: 30px;
+        width: 30px;
+    }
+    .about-item-description{
+        font-size: 14px;
+    }
+    .about-description{
+        font-size: 12px;
+        padding: 0 15px;
+        
+    }
+    .about-description p {margin: 0;}
+
+
+.why{
+    font-size: 14px;
+
+    background-color: #f2f2f2;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.why-item{padding: 0 25px; margin-bottom: 50px}
+.why-item-description{
+    padding: 30px 0px;
+}
+.why-item-img{
+    margin-bottom: 30px;
+}
+.why-item-img__container{
+    width: 45px;
+}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
 }
