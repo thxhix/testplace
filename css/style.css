@@ -278,10 +278,8 @@ header{
 }
 
 .header-title-counter span{
-    color: #22a34c;
-    font-size: 35px;
-    font-weight: 600;
-    font-family: 'Playfair Display', serif;
+    width: 35px;height: 35px;display: inline-block;
+    margin-bottom: 7px
 }
 
 
