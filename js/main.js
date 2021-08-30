@@ -1,4 +1,4 @@
-$('input').on('change paste keyup', function () {
+$('input').on('blur change paste keyup', function () {
   var $this = $(this);
 
   var input_value = $this.val();
